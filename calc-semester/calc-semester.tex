@@ -124,12 +124,12 @@
 
     \begin{center}
       {
-        (1)
+        (1.1)
         \includegraphics{fx}
       }
       \ \ \ \ \ \ \ \ \ \ \ \ \
       {
-        (2)
+        (1.2)
         \includegraphics{two-func}
       }
     \end{center}
@@ -311,7 +311,7 @@
     \subsection*{\small CASO I $\mathbf{Q(x)}$ é um produto de fatores lineares distintos}
       \flushleft Isto é, $$ Q(x) = (a_1x + b_1)(a_2x + b_2)\cdots(a_kx + b_k) $$ onde nenhum fator é repetido. Portanto existem constantes
       $A_1, A_2,..., A_k$ tais que
-      \begin{equation}
+      \begin{equation} \label{eq:r}
         \frac{R(x)}{Q(x)} = \frac{A_1}{a_1x+b_1} + \frac{A_2}{a_2x+b_2} + \cdots + \frac{A_k}{a_kx+b_k}
       \end{equation}
 
@@ -347,7 +347,7 @@
 
         \subsection*{\color{coverup}\small MÉTODO DA COBERTURA (COVER-UP)}
           O método da cobertura consiste em descobrir os termos dos numeradores das frações parciais de uma função racional própria multiplicando
-          a equação (3) pelo denominador da fração cujo numerador contém o termo a ser obtido. Em seguida, atribui-se um valor a $x$ de modo que
+          a equação (\ref{eq:r}) pelo denominador da fração cujo numerador contém o termo a ser obtido. Em seguida, atribui-se um valor a $x$ de modo que
           a equação possa ser simplificada, onde a única incógnita é o termo a ser obtido.
           Por exemplo, considere $$ \frac{x+3}{x^2-4} = \frac{x+3}{(x-2)(x+2)} = \frac{A}{x-2} + \frac{B}{x+2} $$
           Para obtermos o valor de $A$, multiplicamos a equação por $x-2$, seu denominador, obtendo
@@ -614,10 +614,10 @@
 
   \chapter{Integrais múltiplas}
     Seja $f$ uma função de duas variáveis definida em um retângulo fechado
-    $$ R = [a,b] \times [c,d] = \left\{(x,y) \in \mathbb{R}^2 | a x \leqslant b, c \leqslant y \leqslant d \right\} $$
+    $$ R = [a,b] \times [c,d] = \left\{(x,y) \in \mathbb{R}^2 | a \leqslant x \leqslant b, c \leqslant y \leqslant d \right\} $$
 
     O gráfico de $f$ é a superfície de equação $z = f(x,y)$. Seja $f(x,y) \geqslant 0$ e $S$ o sólido acima da região $R$ e abaixo do gráfico de $f$, isto é,
-    $$ S = \left\{(x,y,z) \in \mathbb{R}^3 | 0 z \leqslant f(x,y), (x,y) \in R \right\} $$
+    $$ S = \left\{(x,y,z) \in \mathbb{R}^3 | 0 \leqslant z \leqslant f(x,y), (x,y) \in R \right\} $$
 
     Concluímos que o volume $V$ de $S$, a partir de uma demonstração semelhante à integral unidimensional expressa como o valor limite da soma de Riemann, é
     $$ V = \iint_R{f(x,y)\diff A} = \lim_{m,n \to \infty}{\sum_{i=1}^m{\sum_{j=1}^n}{f(x_i,y_j)\Delta A}} $$
@@ -679,7 +679,7 @@
           \begin{minipage}{35em}
             \small
             {\color{infobox}Teorema de Fubini} \normalfont Se $f$ for contínua no retângulo \\
-            $R = \left\{(x,y) \in \mathbb{R}^2 | a x \leqslant b, c \leqslant y \leqslant d \right\}$, então
+            $R = \left\{(x,y) \in \mathbb{R}^2 | a \leqslant x \leqslant b, c \leqslant y \leqslant d \right\}$, então
             \vspace{-1mm}
             $$\iint_R{f(x,y)\diff A} = \int_a^b{\int_c^d{f(x,y)\diff y}\diff x} = \int_c^d{\int_a^b{f(x,y)\diff x}\diff y} $$
 
@@ -737,8 +737,8 @@
       {\color{astral}\textbf{9-12}} Calcule as integrais duplas.
         \begin{enumerate}
           \setcounter{enumi}{8}
-          \item $\iint_R{\sin{(x+y)}\diff A}, \ \ R = \left\{(x,y)|0 x \leqslant \frac{\pi}{2}, 0 \leqslant y \leqslant \frac{\pi}{2}\right\}$
-          \item $\iint_R$\large$\frac{1+x^2}{1+y^2}$\normalsize$\diff A, \ \ R = \left\{(x,y)|0 x \leqslant 1, 0 \leqslant y \leqslant 1\right\}$
+          \item $\iint_R{\sin{(x+y)}\diff A}, \ \ R = \left\{(x,y)|0 \leqslant x \leqslant \frac{\pi}{2}, 0 \leqslant y \leqslant \frac{\pi}{2}\right\}$
+          \item $\iint_R$\large$\frac{1+x^2}{1+y^2}$\normalsize$\diff A, \ \ R = \left\{(x,y)|0 \leqslant x \leqslant 1, 0 \leqslant y \leqslant 1\right\}$
           \item $\iint_R{ye^{-xy}\diff A}, \ \ R = [0,2] \times [0,3]$
           \item $\iint_R{\left(3y^2-x^2+2\right)\diff A}, \ \ R = [-1,1] \times [-2,2]$
         \end{enumerate}
